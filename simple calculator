@@ -1,0 +1,38 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+ double x , y;
+ int exit;
+ char operation;
+ cout << "\tSImpLE CAlCULATOR\n*************************************\n\n";
+ while(true){
+ cout << "enter your operation:+ , - , * , /\n to exit enter \"!\"\n";
+ cin >> operation;
+ if(operation == '!'){
+    return 0;
+ }
+ cout << "Enter the first number: ";
+ cin >> x;
+ cout << "Enter the second number: ";
+ cin >> y;
+ switch(operation){
+  case '+':
+      cout << "the result: " << x+y <<'\n';
+      break;
+  case '-':
+      cout << "the result: " << x-y <<'\n';
+      break;
+  case '*':
+      cout << "the result: " << x*y <<'\n';
+      break;
+  case '/':
+      cout << "the result: " << (double)(x)/y <<'\n';
+      break;
+  default:
+      cout << "invalid option\n";
+    }
+  }
+}
